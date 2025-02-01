@@ -16,6 +16,10 @@ vim.keymap.set("n", "<M-k>", "<CMD>cprev<CR>")
 -- keyboard shortcut for getting back to normal mode while in terminal
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
+-- keyboard shortcut for commenting out multiple lines
+vim.keymap.set("n", "<C-_>", function() require('Comment.api').toggle.linewise.current() end,
+  { noremap = true, silent = true })
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
