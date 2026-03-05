@@ -52,8 +52,8 @@
 | `<leader>fr` | Resume last search |
 | `<leader>fs` | Symbols in current file |
 | `<leader>fw` | Symbols across workspace |
-| `<space>en` | Browse nvim config files |
-| `<space>ep` | Browse installed plugins |
+| `<leader>fn` | Browse nvim config files |
+| `<leader>fp` | Browse installed plugins |
 
 ### Git (gitsigns)
 

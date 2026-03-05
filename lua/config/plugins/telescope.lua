@@ -38,12 +38,12 @@ return {
       vim.keymap.set("n", "<leader>fw", builtin.lsp_dynamic_workspace_symbols)
 
       -- config files
-      vim.keymap.set("n", "<space>en", function()
+      vim.keymap.set("n", "<leader>fn", function()
         builtin.find_files({ cwd = vim.fn.stdpath("config") })
       end)
 
       -- lazy plugins
-      vim.keymap.set("n", "<space>ep", function()
+      vim.keymap.set("n", "<leader>fp", function()
         builtin.find_files({ cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy") })
       end)
 
