@@ -37,6 +37,8 @@
 | `<leader>ca` | Code action (quick fixes) |
 | `<leader>sh` | Signature help |
 | `<leader>f` | Format buffer |
+| `Ctrl+o` | Jump back (previous position) |
+| `Ctrl+i` | Jump forward |
 | `[d` / `]d` | Previous / next diagnostic |
 | `<leader>e` | Show diagnostic detail |
 
