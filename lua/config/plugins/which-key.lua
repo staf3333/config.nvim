@@ -4,6 +4,7 @@ return {
     event = "VeryLazy",
     opts = {
       spec = {
+        { "<leader>c", group = "Code/Copilot" },
         { "<leader>f", group = "Find" },
         { "<leader>h", group = "Git hunks" },
         { "<leader>r", group = "Rename" },

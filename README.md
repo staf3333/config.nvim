@@ -65,6 +65,17 @@
 | `<leader>hb` | Git blame current line |
 | `<leader>hd` | Diff this file |
 
+### Copilot Chat
+
+| Key | Mode | Action |
+|---|---|---|
+| `<leader>cc` | Normal | Toggle Copilot Chat panel |
+| `<leader>ce` | Visual | Explain selected code |
+| `<leader>cr` | Visual | Review selected code |
+| `<leader>cf` | Visual | Fix selected code |
+| `<leader>co` | Visual | Optimize selected code |
+| `<leader>ct` | Visual | Generate tests for selection |
+
 ### General
 
 | Key | Action |
