@@ -55,7 +55,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 
 local job_id = 0
-vim.keymap.set("n", "<leader>st", function()
+vim.keymap.set("n", "<leader>ts", function()
   vim.cmd.vnew()
   vim.cmd.term()
   vim.cmd.wincmd("J")

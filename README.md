@@ -96,6 +96,7 @@
 | `<space>x` | Execute current line as Lua |
 | `-` | Open Oil file explorer |
 | `<leader>tt` | Toggle floating terminal |
+| `<leader>ts` | Open split terminal |
 | `Ctrl+/` | Toggle comment |
 | `Alt+j` / `Alt+k` | Next / prev quickfix |
 | `Esc Esc` | Exit terminal mode |

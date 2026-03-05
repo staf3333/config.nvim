@@ -10,6 +10,7 @@ return {
         { "<leader>r", group = "Rename" },
         { "<leader>c", group = "Code" },
         { "<leader>s", group = "Signature/Search" },
+        { "<leader>t", group = "Terminal" },
         { "<leader>d", group = "Diagnostics (Trouble)" },
       },
     },
