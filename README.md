@@ -6,7 +6,7 @@
 |---|---|
 | **tokyonight** | Colorscheme |
 | **lazy.nvim** | Plugin manager |
-| **nvim-lspconfig** | LSP client (lua_ls, pyright) |
+| **nvim-lspconfig** | LSP client (lua_ls, pyright, gopls) |
 | **roslyn.nvim** | C# LSP (same engine as Visual Studio) |
 | **blink.cmp** | Completion engine + snippets |
 | **copilot.lua** | GitHub Copilot completions |
