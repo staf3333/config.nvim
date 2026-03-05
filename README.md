@@ -16,6 +16,7 @@
 | **gitsigns.nvim** | Git gutter indicators, blame, hunks |
 | **lualine.nvim** | Status bar (file, branch, diagnostics) |
 | **which-key.nvim** | Keybinding popup (press Space and wait) |
+| **trouble.nvim** | Diagnostics, references, quickfix panel |
 | **mini.nvim** | Utilities |
 
 ## Keybindings
@@ -75,6 +76,17 @@
 | `<leader>cf` | Visual | Fix selected code |
 | `<leader>co` | Visual | Optimize selected code |
 | `<leader>ct` | Visual | Generate tests for selection |
+
+### Trouble (diagnostics panel)
+
+| Key | Action |
+|---|---|
+| `<leader>dd` | Toggle all diagnostics |
+| `<leader>dD` | Toggle buffer diagnostics |
+| `<leader>ds` | Toggle symbols |
+| `<leader>dl` | Toggle LSP definitions/references |
+| `<leader>dL` | Toggle location list |
+| `<leader>dQ` | Toggle quickfix list |
 
 ### General
 
