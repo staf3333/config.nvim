@@ -1,7 +1,22 @@
-print("advent of neovim")
-
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.diagnostic.config({
+  severity_sort = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.HINT] = "",
+    },
+  },
+  virtual_text = {
+    severity = { min = vim.diagnostic.severity.INFO },
+  },
+  underline = {
+    severity = { min = vim.diagnostic.severity.INFO },
+  },
+})
 
 require("config.lazy")
 

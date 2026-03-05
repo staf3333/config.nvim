@@ -5,11 +5,9 @@ return {
       'saghen/blink.cmp',
       {
         "folke/lazydev.nvim",
-        ft = "lua", -- only load on lua files
+        ft = "lua",
         opts = {
           library = {
-            -- See the configuration section for more details
-            -- Load luvit types when the `vim.uv` word is found
             { path = "${3rd}/luv/library", words = { "vim%.uv" } },
           },
         },
@@ -18,20 +16,40 @@ return {
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       require("lspconfig").lua_ls.setup { capabilities = capabilities }
+      require("lspconfig").pyright.setup { capabilities = capabilities }
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
           local c = vim.lsp.get_client_by_id(args.data.client_id)
           if not c then return end
 
-          if c:supports_method('textDocument/formatting') then
-            -- Format the current buffer on save
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              buffer = args.buf,
-              callback = function()
-                vim.lsp.buf.format({ bufnr = args.buf, id = c.id })
-              end,
-            })
+          local map = function(keys, func, desc)
+            vim.keymap.set("n", keys, func, { buffer = args.buf, desc = "LSP: " .. desc })
           end
+
+          -- navigation
+          map("gd", vim.lsp.buf.definition, "Go to definition")
+          map("gD", vim.lsp.buf.declaration, "Go to declaration")
+          map("gr", vim.lsp.buf.references, "Find references")
+          map("gi", vim.lsp.buf.implementation, "Go to implementation")
+          map("gt", vim.lsp.buf.type_definition, "Go to type definition")
+
+          -- info
+          map("K", vim.lsp.buf.hover, "Hover docs")
+          map("<leader>sh", vim.lsp.buf.signature_help, "Signature help")
+
+          -- actions
+          map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
+          map("<leader>ca", vim.lsp.buf.code_action, "Code action")
+
+          -- diagnostics
+          map("[d", vim.diagnostic.goto_prev, "Previous diagnostic")
+          map("]d", vim.diagnostic.goto_next, "Next diagnostic")
+          map("<leader>e", vim.diagnostic.open_float, "Show diagnostic")
+
+          -- manual format only
+          map("<leader>f", function()
+            vim.lsp.buf.format({ bufnr = args.buf, id = c.id })
+          end, "Format buffer")
         end,
       })
     end,
