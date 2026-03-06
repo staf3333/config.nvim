@@ -16,6 +16,7 @@
 | **gitsigns.nvim** | Git gutter indicators, blame, hunks |
 | **lualine.nvim** | Status bar (file, branch, diagnostics) |
 | **which-key.nvim** | Keybinding popup (press Space and wait) |
+| **harpoon** | Quick file bookmarks (jump between 4 files) |
 | **trouble.nvim** | Diagnostics, references, quickfix panel |
 | **mini.nvim** | Utilities |
 
@@ -31,7 +32,7 @@
 | `gD` | Go to declaration |
 | `gr` | Find all references |
 | `gi` | Go to implementation |
-| `gt` | Go to type definition |
+| `<leader>gt` | Go to type definition |
 | `K` | Hover docs (info about symbol) |
 | `<leader>rn` | Rename symbol |
 | `<leader>ca` | Code action (quick fixes) |
@@ -54,8 +55,20 @@
 | `<leader>fr` | Resume last search |
 | `<leader>fs` | Symbols in current file |
 | `<leader>fw` | Symbols across workspace |
+| `<leader>fa` | Find all files (includes gitignored) |
 | `<leader>fn` | Browse nvim config files |
 | `<leader>fp` | Browse installed plugins |
+
+### Harpoon (quick file navigation)
+
+| Key | Action |
+|---|---|
+| `<leader>a` | Add current file to harpoon list |
+| `Ctrl+e` | Toggle harpoon quick menu |
+| `Ctrl+h` | Jump to file 1 |
+| `Ctrl+j` | Jump to file 2 |
+| `Ctrl+k` | Jump to file 3 |
+| `Ctrl+l` | Jump to file 4 |
 
 ### Git (gitsigns)
 
