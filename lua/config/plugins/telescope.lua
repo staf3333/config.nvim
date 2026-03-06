@@ -4,7 +4,12 @@ return {
     tag = "0.1.8",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = vim.fn.has("win32") == 1
+          and "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+          or "make",
+      },
     },
     config = function()
       local telescope = require("telescope")
@@ -36,6 +41,11 @@ return {
       vim.keymap.set("n", "<leader>fr", builtin.resume)
       vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols)
       vim.keymap.set("n", "<leader>fw", builtin.lsp_dynamic_workspace_symbols)
+
+      -- find all files (includes gitignored)
+      vim.keymap.set("n", "<leader>fa", function()
+        builtin.find_files({ find_command = { "rg", "--files", "--hidden", "--no-ignore", "-g", "!.git" } })
+      end)
 
       -- config files
       vim.keymap.set("n", "<leader>fn", function()

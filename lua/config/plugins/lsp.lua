@@ -32,7 +32,7 @@ return {
           map("gD", vim.lsp.buf.declaration, "Go to declaration")
           map("gr", vim.lsp.buf.references, "Find references")
           map("gi", vim.lsp.buf.implementation, "Go to implementation")
-          map("gt", vim.lsp.buf.type_definition, "Go to type definition")
+          map("<leader>gt", vim.lsp.buf.type_definition, "Go to type definition")
 
           -- info
           map("K", vim.lsp.buf.hover, "Hover docs")
