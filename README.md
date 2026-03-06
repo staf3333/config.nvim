@@ -144,3 +144,7 @@
 - Caps Lock is remapped to Ctrl via PowerToys
 - Font: JetBrainsMono NF (set in Windows Terminal)
 - Press `<leader>` (Space) and wait for which-key popup to see all keybindings
+
+## Future Plugins to Explore
+
+- [sidekick.nvim](https://github.com/folke/sidekick.nvim) — AI integration with Copilot Next Edit Suggestions + AI CLI terminal (requires reworking copilot.lua setup)

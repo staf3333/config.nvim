@@ -39,7 +39,9 @@ return {
           map("<leader>sh", vim.lsp.buf.signature_help, "Signature help")
 
           -- actions
-          map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
+          vim.keymap.set("n", "<leader>rn", function()
+            return ":IncRename " .. vim.fn.expand("<cword>")
+          end, { buffer = args.buf, desc = "LSP: Rename symbol", expr = true })
           map("<leader>ca", vim.lsp.buf.code_action, "Code action")
 
           -- diagnostics
