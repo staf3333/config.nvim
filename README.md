@@ -18,6 +18,8 @@
 | **which-key.nvim** | Keybinding popup (press Space and wait) |
 | **harpoon** | Quick file bookmarks (jump between 4 files) |
 | **trouble.nvim** | Diagnostics, references, quickfix panel |
+| **snacks.nvim** | Notifier, dashboard, scroll, zen, indent, lazygit, gitbrowse |
+| **inc-rename.nvim** | Live inline preview for LSP renames |
 | **mini.nvim** | Utilities |
 
 ## Keybindings
@@ -80,6 +82,17 @@
 | `<leader>hr` | Reset hunk |
 | `<leader>hb` | Git blame current line |
 | `<leader>hd` | Diff this file |
+
+### Snacks
+
+| Key | Action |
+|---|---|
+| `<leader>z` | Toggle Zen Mode |
+| `<leader>gg` | Open Lazygit |
+| `<leader>gb` | Open current file in browser (GitHub/ADO) |
+| `<leader>nh` | Notification history |
+| `<leader>nd` | Dismiss notifications |
+| `]]` / `[[` | Jump between references of word under cursor |
 
 ### Copilot Chat
 
